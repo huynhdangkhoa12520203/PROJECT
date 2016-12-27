@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/id_fragment_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_above="@+id/id_btn_location"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:choiceMode="singleChoice"
+        android:focusableInTouchMode="true"
+        android:listSelector="@drawable/list_selector"
+        android:transcriptMode="normal"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/id_btn_location"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/bg_btn_my_location"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        >
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_near"
+
+            android:onClick="showATMnearestYou" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/ic_expand"
+            android:onClick="expandAllAtm"/>
+
+        <Button
+            android:id="@+id/btn_draw"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/icon_draw_location"
+            android:onClick="drawLineBetweenLocation" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
